@@ -4,6 +4,8 @@ ENV KAPITAN_VERSION=0.28.0
 
 RUN apt-get update && apt-get install -y \
     ca-certificates \
+    cargo \
+    git \
     socat \
     gnupg \
     build-essential \
