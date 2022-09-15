@@ -33,7 +33,8 @@ jobs:
         export FULL_IMAGE=${REGISTRY}/${GITREPO}:${TAG}
         echo "FULL_IMAGE=${FULL_IMAGE}" >> ${GITHUB_ENV}
 
-    - name: Set up QEMU
+    - name: Set up QEMU + binfmt
+      # https://github.com/docker/buildx/issues/495#issuecomment-1043341496
       id: qemu
       uses: docker/setup-qemu-action@v1
       with:
